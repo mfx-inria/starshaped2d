@@ -1,0 +1,6 @@
+*.ppm
+*.cmake
+Makefile
+CMakeCache.txt
+starshaped2d
+CMakeFiles
