@@ -141,8 +141,8 @@ void compute_voronoi_growth_labeling(unsigned int image_size, std::vector<Vec2d>
 }
 
 void read_points_file(std::vector<Vec2d>& points, const std::string& filename, double& min_radial_span, double& max_radial_span){
-    min_radial_span = std::numeric_limits<unsigned int>::max();
-    max_radial_span = -std::numeric_limits<unsigned int>::max();
+    min_radial_span = std::numeric_limits<double>::max();
+    max_radial_span = -std::numeric_limits<double>::max();
     std::ifstream points_file(filename.c_str());
     if (points_file.is_open()) {
         std::string line;
