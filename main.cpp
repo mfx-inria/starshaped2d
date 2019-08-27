@@ -202,8 +202,6 @@ int main(int argc, char **argv) {
             Vec2d periodic_site = Vec2d(
                     (static_cast<double>(x) + 0.5) / static_cast<double>(lattice_size),
                     (static_cast<double>(y) + 0.5) / static_cast<double>(lattice_size));
-            if (!(periodic_site.x >= -periodic_offset && periodic_site.x <= 1.0 + periodic_offset)) continue;
-            if (!(periodic_site.y >= -periodic_offset && periodic_site.y <= 1.0 + periodic_offset)) continue;
             if (lattice_type == DiagonalSquare) {
                 if (!((std::abs(x) % 2) == (std::abs(y) % 2))) continue;
             }
@@ -218,6 +216,8 @@ int main(int argc, char **argv) {
                     if (((std::abs(y) % 2 == 1) && (std::abs(x) % 3 == 1)) || ((std::abs(y) % 2 == 0) && (std::abs(x) % 3 == 2))) continue;
                 } 
             }
+            if (!(periodic_site.x >= -periodic_offset && periodic_site.x <= 1.0 + periodic_offset)) continue;
+            if (!(periodic_site.y >= -periodic_offset && periodic_site.y <= 1.0 + periodic_offset)) continue;
             periodic_sites.push_back((periodic_site + periodic_offset) / (1.0 + periodic_offset * 2.0));
         }
     }
