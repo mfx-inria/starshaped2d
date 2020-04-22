@@ -72,7 +72,7 @@ As a illustration, the above image tiled four times gives:
 
 ## License
 
-The code in this project is distributed under MIT license.
+The code in this project is distributed under the GNU General Public License v3.0
 
 
 ## Acknowledgments
