@@ -178,7 +178,7 @@ int main(int argc, char **argv) {
     std::vector<Vec2d> star_shaped_polygon;
     double min_radial_span, max_radial_span;
     read_points_file(star_shaped_polygon, argv[1], min_radial_span, max_radial_span);
-    assert(star_shaped_polygon.size() > = 3);
+    assert(star_shaped_polygon.size() >= 3);
     double k = 1.0; // worst case upper-bound periodic unit cell
     if (lattice_type == DiagonalSquare) k = sqrt(1.0 / 2.0);
     else if (lattice_type == Triangular) k = 1.0 / 2.0;
